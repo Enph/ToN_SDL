@@ -79,10 +79,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="constants.cpp" />
-    <ClCompile Include="controller.cpp" />
-    <ClCompile Include="fileIO.cpp" />
-    <ClCompile Include="globals.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="FileIO.cpp" />
+    <ClCompile Include="Globals.cpp" />
     <ClCompile Include="LUtils.cpp" />
     <ClCompile Include="main.cpp">
       <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MultiThreadedDLL</RuntimeLibrary>
@@ -92,14 +91,20 @@
     <ClCompile Include="LTimer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Resources\background_test.png" />
-    <Image Include="Resources\introBG.png" />
-    <Image Include="Resources\window_icon.png" />
+    <Image Include="Resources\Ground_GrassyDirt_Tile.png" />
+    <Image Include="Resources\Ground_GrassyDirt_Tile32.png" />
+    <Image Include="Resources\Sky_BlueSolid_Tile.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LHeaders.h" />
+    <ClInclude Include="CleanUp.h" />
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="FileIO.h" />
+    <ClInclude Include="Globals.h" />
     <ClInclude Include="LPrototypes.h" />
     <ClInclude Include="LTimer.h" />
+    <ClInclude Include="LUtils.h" />
+    <ClInclude Include="Res_Path.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

@@ -18,9 +18,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="constants.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,24 +30,24 @@
     <ClCompile Include="LUtils.cpp">
       <Filter>Source Files\TowerOfNorAPI</Filter>
     </ClCompile>
-    <ClCompile Include="globals.cpp">
+    <ClCompile Include="Controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="fileIO.cpp">
+    <ClCompile Include="Globals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileIO.cpp">
       <Filter>Source Files\TowerOfNorAPI</Filter>
-    </ClCompile>
-    <ClCompile Include="controller.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Resources\background_test.png">
+    <Image Include="Resources\Ground_GrassyDirt_Tile.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Resources\window_icon.png">
+    <Image Include="Resources\Sky_BlueSolid_Tile.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Resources\introBG.png">
+    <Image Include="Resources\Ground_GrassyDirt_Tile32.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -61,7 +58,25 @@
     <ClInclude Include="LPrototypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LHeaders.h">
+    <ClInclude Include="LUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileIO.h">
+      <Filter>Source Files\TowerOfNorAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="Res_Path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CleanUp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

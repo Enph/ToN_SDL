@@ -1,18 +1,16 @@
 #pragma once
-#include "LHeaders.h"
+#include "FileIO.h"
 
-LUtils loadUtil;
-globals global;
+FileIO::FileIO(void){}
 
-void fileIO::load_files()
+void FileIO::load_files(Globals gl)
 {
-	load_graphics();
+	//load_graphics(gl);
 }
 
-void fileIO::load_graphics()
+void FileIO::load_graphics(Globals gl)
 {
+	gl.setIntroBG(SDL_LoadBMP("Resources\Bliss.bmp"));
 
-	//Load the backgrounds
-	global.introBG = loadUtil.loadSurface("Resources\introBG.png");
-	global.titleBG = loadUtil.loadSurface("Resources\background_test.png");
+	
 }

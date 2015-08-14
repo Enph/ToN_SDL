@@ -1,24 +1,21 @@
 #pragma once
-#include "LHeaders.h"
+#include "LUtils.h"
 
-globals globalVAR;
+
+LUtils::LUtils(void) {}
+LUtils loadUtil;
 
 SDL_Surface* loadSurface(std::string path);
 
 
-bool LUtils::loadPNG(std::string IMGfilePath) //confirmation that a PNG file got loaded properly on gPNGSurface
+LUtils LUtils::getUtilsObj()
 {
-	bool success = true;
-	globalVAR.gPNGSurface = loadSurface(IMGfilePath);
-	if (globalVAR.gPNGSurface == NULL)
-	{
-		printf("Failed to load PNG img \n");
-		success = false;
-	}
-	return success;
+	return *loadUtil;
 }
 
-SDL_Surface* LUtils::loadSurface(std::string path)
+
+
+SDL_Surface* LUtils::loadSurface(std::string path,SDL_Surface *screenSurface)
 {
 	//The final optimized image
 	SDL_Surface* optimizedSurface = NULL;
@@ -32,7 +29,7 @@ SDL_Surface* LUtils::loadSurface(std::string path)
 	else
 	{
 		//Convert surface to screen format
-		optimizedSurface = SDL_ConvertSurface(loadedSurface, globalVAR.gScreenSurface->format, NULL);
+		optimizedSurface = SDL_ConvertSurface(loadedSurface, screenSurface->format, NULL);
 		if (optimizedSurface == NULL)
 		{
 			printf("Unable to optimize image %s! SDL Error: %s\n", path.c_str(), SDL_GetError());
@@ -43,6 +40,11 @@ SDL_Surface* LUtils::loadSurface(std::string path)
 	}
 
 	return optimizedSurface;
+}
+
+void LUtils::update_screen(SDL_Window *gWindow)
+{
+	SDL_UpdateWindowSurface(gWindow);
 }
 
 
